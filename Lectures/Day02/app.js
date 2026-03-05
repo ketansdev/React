@@ -88,13 +88,6 @@
 // const root = ReactDOM.createRoot(document.getElementById("root"));
 // root.render(element);
 
-
-
-
-
-
-
-
 // const fruits = ["Apple", "Banana", "Mango", "Watermelon", "Jackfruit"];
 
 // const element = (
@@ -108,18 +101,24 @@
 // const root = ReactDOM.createRoot(document.getElementById("root"));
 // root.render(element);
 
+// function App(props){
+//     return(
+//         <h1>I am Learning {props.language}</h1>
+//     )
+// }
 
+// const element = <App id = "title" language = "React"/>
 
+// const root = ReactDOM.createRoot(document.getElementById("root"));
+// root.render(element);
 
+// Practice
 
-
-function App(props){
-    return(
-        <h1>I am Learning {props.language}</h1>
-    )
+function Welcome(props) {
+  props.name = "Rahul";
+  return <p>Welcome {props.name}</p>;
 }
-
-const element = <App id = "title" language = "React"/>
+const element = <Welcome name="Ketan" />;
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(element);
