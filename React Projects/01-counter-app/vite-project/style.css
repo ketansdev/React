@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+  /* Body */
+  --body-bg: #f0f2f5;
+  --body-font-family: 'Inter', sans-serif;
+  --body-font-color: #111827;
+
+  /* Card */
+  --card-bg: #ffffff;
+  --card-border-radius: 16px;
+  --card-padding: 32px;
+  --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+
+  /* Counter Text */
+  --counter-font-size: 5rem;
+  --counter-font-weight: 700;
+  --counter-color: #111827;
+  --counter-margin-bottom: 24px;
+
+  /* Button */
+  --btn-bg: #4f46e5;
+  --btn-color: #ffffff;
+  --btn-font-size: 1.25rem;
+  --btn-padding: 12px 32px;
+  --btn-border-radius: 10px;
+  --btn-hover-bg: #4338ca;
+
+  /* Spacing */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+
+  /* Font Sizes */
+  --font-size-sm: 0.875rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.25rem;
+
+  /* Font Colors */
+  --color-text-primary: #111827;
+  --color-text-secondary: #6b7280;
+  --color-text-muted: #9ca3af;
+}
+
+body{
+    background-color: var(--body-bg);
+    color: var(--body-font-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: var(--body-font-family);
+    font-size: var(--font-size-lg);
+}
+
+#root{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: var(--card-bg);
+    padding: var(--card-padding);
+    box-shadow: var(--card-shadow);
+    border-radius: var(--card-border-radius);
+}
+
+#root div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+#root h1{
+    padding: var(--spacing-md);
+}
+
+#root p{
+    padding: var(--spacing-md);
+    font-size: var(--font-size-lg);
+    font-weight: 500;
+}
+
+button{
+    background-color: var(--btn-bg);
+    color: var(--btn-color);
+    border: none;
+    padding: var(--btn-padding);
+    border-radius: var(--btn-border-radius);
+    font-size: var(--btn-font-size);
+    cursor: pointer;
+}
