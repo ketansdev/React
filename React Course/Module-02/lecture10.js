@@ -5,7 +5,7 @@
 const user = {
     name : "Ketan",
     age : 30,
-    city : "Mumbai"
+    // city : "Mumbai"
 }
 
 
@@ -15,6 +15,9 @@ console.log(name, age, location);
 
 const {email = "Not Provided"} = user;
 console.log(email)
+
+const {city = "Panvel"} = user;
+console.log(city);
 
 
 
