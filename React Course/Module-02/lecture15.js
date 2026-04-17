@@ -24,3 +24,10 @@ function sum(...nums){
 }
 
 console.log(sum(1, 2, 3, 5));
+
+
+function stationarry(...elements){
+    console.log(elements);
+}
+
+stationarry("pen", "pencil", "eraser", "sharpner");
