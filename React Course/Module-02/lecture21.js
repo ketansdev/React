@@ -231,22 +231,38 @@
 
 // Promise.all()
 
-const p1 = new Promise((resolve, reject) =>{
-    setTimeout(() =>{
-        resolve("First")
-    }, 1000);
+// const p1 = new Promise((resolve, reject) =>{
+//     setTimeout(() =>{
+//         resolve("First")
+//     }, 1000);
 
-})
+// })
 
-const p2 = new Promise((resolve, reject) =>{
-    setTimeout(()=>{
-        resolve("Second")
-    },2000)
-})
+// const p2 = new Promise((resolve, reject) =>{
+//     setTimeout(()=>{
+//         resolve("Second")
+//     },2000)
+// })
 
-Promise.all([p1, p2])
-.then((results)=> {
-    console.log(results);
-}).catch((error)=>{
-    console.log(error);
+// Promise.all([p1, p2])
+// .then((results)=> {
+//     console.log(results);
+// }).catch((error)=>{
+//     console.log(error);
+// })
+
+
+
+
+const fetchUser1 = fetch("https://jsonplaceholder.typicode.com/users/1").then(res => res.json())
+const fetchUser2 = fetch("https://jsonplaceholder.typicode.com/users/2").then(res => res.json())
+const fetchUser3 = fetch("https://jsonplaceholder.typicode.com/users/3").then(res => res.json())
+
+Promise.all([fetchUser1, fetchUser2, fetchUser3]).then((users)=>{
+    console.log("All users loaded");
+    users.forEach((user)=>{
+        console.log(user.name, user.email);
+    })
+}).catch((error) =>{
+    console.log("Failed to fetch the user info", error)
 })
