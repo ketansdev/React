@@ -14,18 +14,14 @@
 //   };
 // }
 
-
 // const square = memoSquare();
 // console.time("With Memo");
 // console.log(square(5));
 // console.timeEnd("With Memo");
 
-
 // console.time("With Memo Again");
 // console.log(square(5));
 // console.timeEnd("With Memo Again");
-
-
 
 // function memoAdd(){
 //     const cache = {};
@@ -49,14 +45,9 @@
 // console.log(add(2, 5));
 // console.timeEnd("With Memo");
 
-
 // console.time("With Memo again");
 // console.log(add(2, 5));
 // console.timeEnd("With Memo again");
-
-
-
-
 
 // function memoSubtract(){
 //     const cache = {};
@@ -80,15 +71,11 @@
 // console.log(subtract(10, 5))
 // console.timeEnd("With Memo")
 
-
 // console.time("With Memo again");
 // console.log(subtract(10, 5))
 // console.timeEnd("With Memo again")
 
-
-
-// practice problem 
-
+// practice problem
 
 // function squareMemoize(){
 //     const cache = {};
@@ -105,10 +92,6 @@
 
 // const square = squareMemoize();
 // console.log(square(5))
-
-
-
-
 
 // function addMemoize(){
 //     const cache = {};
@@ -129,6 +112,27 @@
 // const add = addMemoize();
 // console.log(add(2, 3))
 
-
-
 // console.log(add(2, 3))
+
+// function memoizeFetch() {
+//   const cache = {};
+//   return function (id) {
+//     if (id in cache) {
+//         console.log("From cache")
+//       return cache[id];
+      
+//     }
+//     console.log("Calculating");
+//     const res = id;
+//     cache[id] = res;
+//     return fetch(`https://jsonplaceholder.typicode.com/users/${id}`).then(
+//       (res) => res.json(),
+//     );
+//   };
+// }
+
+// const getUser = memoizeFetch();
+// console.log(getUser(1))
+
+
+// console.log(getUser(1))
