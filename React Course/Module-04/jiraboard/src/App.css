@@ -1,0 +1,17 @@
+.app {
+  display: grid;
+  grid-template-rows: 150px auto;
+}
+
+.app_main {
+  display: flex;
+  justify-content: space-around;
+}
+
+.app_heading {
+  text-align: center;
+  margin: 50px 0;
+  font-size: 44px;
+}
+
+
