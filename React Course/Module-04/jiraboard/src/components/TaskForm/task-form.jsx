@@ -5,8 +5,11 @@ import { useState } from "react";
 const TaskForm = () => {
   const [taskData, setTaskData] = useState({
     "task": "",
-    "status": "Ready for Development"
+    "status": "Ready for Development",
+    "tags" : []
   })
+
+  
 
 
   const handleChange = (e) =>{
@@ -20,6 +23,21 @@ const TaskForm = () => {
     e.preventDefault();
     console.log(taskData);
   }
+
+  const selectedTags = (tag) =>{
+      if(taskData.tags.some((item) => item === tag)){
+       const filterTags =  taskData.tags.filter((item) => item !== tag);
+       setTaskData((prev) =>{
+        return{...prev, tags:filterTags}
+       })
+      }else{
+        setTaskData((prev) =>{
+          return{...prev, tags:[...prev.tags, tag]}
+        })
+      }
+  }
+
+  console.log("taskData",taskData)
 
 
   
@@ -37,9 +55,9 @@ const TaskForm = () => {
         />
         <div className="task_form_bottom">
           <div className="tags">
-            <Tag tagName="DEV" />
-            <Tag tagName="QA" />
-            <Tag tagName="Product Owner" />
+            <Tag tagName="DEV" selectedTags = {selectedTags}/>
+            <Tag tagName="QA" selectedTags = {selectedTags}/>
+            <Tag tagName="Product Owner" selectedTags = {selectedTags}/>
           </div>
 
           <div className="select_and_add">
