@@ -24,17 +24,32 @@ const TaskForm = () => {
     console.log(taskData);
   }
 
+  const checkTag = (tag) =>{
+     console.log(taskData.tags.some((item) => item === tag));
+    return taskData.tags.some((item) => item === tag)
+  }
+
   const selectedTags = (tag) =>{
-      if(taskData.tags.some((item) => item === tag)){
-       const filterTags =  taskData.tags.filter((item) => item !== tag);
-       setTaskData((prev) =>{
-        return{...prev, tags:filterTags}
-       })
-      }else{
-        setTaskData((prev) =>{
-          return{...prev, tags:[...prev.tags, tag]}
-        })
-      }
+    setTaskData((prev) =>{
+      const isSelected = taskData.tags.includes(tag);
+      const tags = isSelected ? prev.tags.filter((item) => item !== tag) : [...prev.tags, tag];
+
+      return {...prev, tags}
+
+    })
+
+
+
+      // if(taskData.tags.some((item) => item === tag)){
+      //  const filterTags =  taskData.tags.filter((item) => item !== tag);
+      //  setTaskData((prev) =>{
+      //   return{...prev, tags:filterTags}
+      //  })
+      // }else{
+      //   setTaskData((prev) =>{
+      //     return{...prev, tags:[...prev.tags, tag]}
+      //   })
+      // }
   }
 
   console.log("taskData",taskData)
@@ -55,9 +70,9 @@ const TaskForm = () => {
         />
         <div className="task_form_bottom">
           <div className="tags">
-            <Tag tagName="DEV" selectedTags = {selectedTags}/>
-            <Tag tagName="QA" selectedTags = {selectedTags}/>
-            <Tag tagName="Product Owner" selectedTags = {selectedTags}/>
+            <Tag tagName="DEV" selectedTags = {selectedTags} selected = {checkTag("DEV")}/>
+            <Tag tagName="QA" selectedTags = {selectedTags} selected = {checkTag("QA")}/>
+            <Tag tagName="Product Owner" selectedTags = {selectedTags} selected = {checkTag("Product Owner")}/>
           </div>
 
           <div className="select_and_add">
