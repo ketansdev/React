@@ -54,9 +54,6 @@ const TaskForm = () => {
 
   console.log("taskData",taskData)
 
-
-  
-
   return (
     <header className="app_header">
       <form onSubmit={handleClick}>
