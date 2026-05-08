@@ -1,0 +1,17 @@
+.nav{
+    background-color: maroon;
+}
+
+.nav ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+
+.nav ul li{
+    list-style: none;
+    font-size: 23px;
+    color: white;
+    cursor: pointer;
+}
