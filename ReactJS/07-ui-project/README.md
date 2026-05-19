@@ -26,7 +26,7 @@ No backend or functionality has been added yet.
 
 ## 📸 Screenshot
 
-![Project Screenshot](./src/assets/screenshot.png)
+![Project Screenshot](./src/assets/Screenshot.png)
 
 > Replace the image path with your actual screenshot path.
 
