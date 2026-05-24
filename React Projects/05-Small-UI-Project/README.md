@@ -1,16 +1,62 @@
-# React + Vite
+# Simple Cards UI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A clean and responsive Cards UI project built using React and Tailwind CSS.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+# Screenshot
 
-## React Compiler
+![Project Screenshot](./src/assets/screenshot.png)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+# Features
+
+- Responsive Cards Layout
+- Modern Minimal UI
+- Smooth Hover Effects
+- Reusable Components
+- Tailwind CSS Styling
+- Beginner Friendly Project
+
+---
+
+# Tech Stack
+
+- React
+- Vite
+- Tailwind CSS
+
+---
+
+# Installation
+
+Clone the repository:
+
+```bash
+git clone <your-repo-link>
+```
+
+Navigate to project folder:
+
+```bash
+cd simple-cards-ui
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+
+# License
+
+This project is open source and free to use.
+
+---
+
+# Author
+
+Made with ❤️ using React & Tailwind CSS
