@@ -1,0 +1,7 @@
+.box{
+  width: 400px;
+  height: 400px;
+  background-color: crimson;
+  cursor: pointer;
+  /* margin: 20px; */
+}
